@@ -7,6 +7,7 @@ setup(name='jupyter-greek-latex',
       author='Marios Papachristou',
       author_email='papachristoumarios@gmail.com',
       url='https://github.com/papachristoumarios/jupyter-greek-latex',
+      include_package_data=True,
       packages=[],
       scripts=['jupyter-greek-latex.py']
      )

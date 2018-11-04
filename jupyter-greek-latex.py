@@ -4,11 +4,14 @@
 # Usage: jupyter nbconvert foo.ipynb --to latex --stdout | jupyter-greek-latex.py >result.tex
 
 import sys
+import os
+
+this_dir, this_filename = os.path.split(__file__)
    
-with open('delimiter.aux') as f:
+with open(os.path.join(this_dir, 'delimiter.aux')) as f:
 	delimiter = f.read()
 
-with open('prelude.aux') as f:
+with open(os.path.join(this_dir, 'prelude.aux')) as f:
 	prelude = f.read()
 
 notebook = sys.stdin.read().replace(delimiter, prelude)
