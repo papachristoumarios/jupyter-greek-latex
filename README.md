@@ -21,12 +21,12 @@ pip3 install jupyter-greek-latex
 Example Usage
 
 ```
-jupyter nbconvert foo.ipynb --to latex --stdout | jupyter-greek-latex.py >result.tex
+jupyter nbconvert foo.ipynb --to latex && jupyter-greek-latex.py <foo.tex >result.tex
 ```
 
 With compilation using `xelatex`
 ```
-jupyter nbconvert foo.ipynb --to latex --stdout | jupyter-greek-latex.py | xelatex
+jupyter nbconvert foo.ipynb --to latex && jupyter-greek-latex.py <foo.tex | xelatex
 ```
 
 
